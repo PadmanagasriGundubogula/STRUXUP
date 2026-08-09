@@ -7,7 +7,11 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Struxup Engineers & Infra" },
-      { name: "description", content: "Get in touch with Struxup Engineers & Infra Pvt. Ltd. — Amaravathi, Andhra Pradesh." },
+      {
+        name: "description",
+        content:
+          "Get in touch with Struxup Engineers & Infra Pvt. Ltd. — Amaravathi, Andhra Pradesh.",
+      },
       { property: "og:title", content: "Contact Struxup" },
       { property: "og:description", content: "Let's discuss your next engineering project." },
     ],
@@ -38,9 +42,15 @@ function Contact() {
     <>
       <section className="bg-gradient-hero py-20 text-primary-foreground sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-glow">Contact</p>
-          <h1 className="mt-3 max-w-3xl font-display text-4xl font-extrabold sm:text-5xl">Let's build something extraordinary.</h1>
-          <p className="mt-5 max-w-2xl text-primary-foreground/85">Whether it's a feasibility study or full project delivery — we'd love to hear from you.</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-glow">
+            Contact
+          </p>
+          <h1 className="mt-3 max-w-3xl font-display text-4xl font-extrabold sm:text-5xl">
+            Let's build something extraordinary.
+          </h1>
+          <p className="mt-5 max-w-2xl text-primary-foreground/85">
+            Whether it's a feasibility study or full project delivery — we'd love to hear from you.
+          </p>
         </div>
       </section>
 
@@ -48,7 +58,9 @@ function Contact() {
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <h2 className="font-display text-2xl font-bold">Get in touch</h2>
-            <p className="mt-3 text-muted-foreground">Reach our office or drop us a message — we typically reply within one business day.</p>
+            <p className="mt-3 text-muted-foreground">
+              Reach our office or drop us a message — we typically reply within one business day.
+            </p>
 
             <ul className="mt-8 space-y-6">
               <li className="flex gap-4">
@@ -66,7 +78,12 @@ function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold">Email</p>
-                  <a href="mailto:eswarvinay@struxup.net" className="break-all text-primary hover:text-accent">eswarvinay@struxup.net</a>
+                  <a
+                    href="mailto:eswarvinay@struxup.net"
+                    className="break-all text-primary hover:text-accent"
+                  >
+                    eswarvinay@struxup.net
+                  </a>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -81,7 +98,10 @@ function Contact() {
             </ul>
           </div>
 
-          <form onSubmit={onSubmit} className="rounded-2xl border border-border bg-card p-6 shadow-card-soft sm:p-8 lg:col-span-3">
+          <form
+            onSubmit={onSubmit}
+            className="rounded-2xl border border-border bg-card p-6 shadow-card-soft sm:p-8 lg:col-span-3"
+          >
             <div className="grid gap-5 sm:grid-cols-2">
               <Field label="Full Name" name="name" required />
               <Field label="Email" name="email" type="email" required />
@@ -90,7 +110,13 @@ function Contact() {
             </div>
             <div className="mt-5">
               <label className="mb-2 block text-sm font-medium">Message</label>
-              <textarea name="message" required rows={6} className="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm transition-smooth focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/30" placeholder="Tell us about your project…" />
+              <textarea
+                name="message"
+                required
+                rows={6}
+                className="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm transition-smooth focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/30"
+                placeholder="Tell us about your project…"
+              />
             </div>
             <button
               type="submit"
@@ -107,13 +133,28 @@ function Contact() {
   );
 }
 
-function Field({ label, name, type = "text", required }: { label: string; name: string; type?: string; required?: boolean }) {
+function Field({
+  label,
+  name,
+  type = "text",
+  required,
+}: {
+  label: string;
+  name: string;
+  type?: string;
+  required?: boolean;
+}) {
   return (
     <div>
       <label className="mb-2 block text-sm font-medium">
         {label} {required && <span className="text-accent">*</span>}
       </label>
-      <input name={name} type={type} required={required} className="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm transition-smooth focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/30" />
+      <input
+        name={name}
+        type={type}
+        required={required}
+        className="w-full rounded-md border border-input bg-background px-3.5 py-2.5 text-sm transition-smooth focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/30"
+      />
     </div>
   );
 }

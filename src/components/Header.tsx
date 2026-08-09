@@ -43,7 +43,7 @@ export function Header() {
         // Trigger when section crosses ~30% from top of viewport
         rootMargin: "-30% 0px -60% 0px",
         threshold: 0,
-      }
+      },
     );
 
     elements.forEach((el) => observer.observe(el));
@@ -88,10 +88,18 @@ export function Header() {
             setOpen(false);
           }}
         >
-          <img src={logo} alt="Struxup Engineers & Infra logo" className="h-12 w-12 object-contain" width={48} height={48} />
+          <img
+            src={logo}
+            alt="Struxup Engineers & Infra logo"
+            className="h-12 w-12 object-contain"
+            width={48}
+            height={48}
+          />
           <div className="hidden flex-col leading-tight sm:flex">
             <span className="font-display text-base font-bold text-primary">STRUXUP</span>
-            <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">Engineers & Infra</span>
+            <span className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+              Engineers & Infra
+            </span>
           </div>
         </Link>
 
@@ -107,7 +115,7 @@ export function Header() {
                   "group relative rounded-md px-4 py-2 text-sm font-medium transition-all duration-300",
                   active
                     ? "text-primary font-semibold -translate-y-0.5"
-                    : "text-foreground/80 hover:text-primary hover:-translate-y-0.5"
+                    : "text-foreground/80 hover:text-primary hover:-translate-y-0.5",
                 )}
               >
                 <span className="relative inline-block">
@@ -115,7 +123,7 @@ export function Header() {
                   <span
                     className={cn(
                       "pointer-events-none absolute -bottom-1 left-0 h-0.5 w-full origin-left rounded-full bg-gradient-accent transition-transform duration-300 ease-out",
-                      active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                      active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100",
                     )}
                   />
                 </span>
@@ -146,7 +154,12 @@ export function Header() {
         </button>
       </div>
 
-      <div className={cn("border-t border-border bg-background lg:hidden", open ? "block animate-fade-in" : "hidden")}>
+      <div
+        className={cn(
+          "border-t border-border bg-background lg:hidden",
+          open ? "block animate-fade-in" : "hidden",
+        )}
+      >
         <nav className="mx-auto flex max-h-[calc(100vh-5rem)] max-w-7xl flex-col overflow-y-auto overscroll-contain px-4 py-3 sm:px-6">
           {navItems.map((item) => {
             const active = isActive(item);
@@ -159,7 +172,7 @@ export function Header() {
                   "rounded-md px-3 py-3 text-base font-medium transition-all duration-300",
                   active
                     ? "bg-secondary text-primary font-semibold translate-x-1 border-l-2 border-accent"
-                    : "text-foreground/85 hover:translate-x-1 hover:bg-secondary hover:text-primary"
+                    : "text-foreground/85 hover:translate-x-1 hover:bg-secondary hover:text-primary",
                 )}
               >
                 {item.label}
@@ -170,7 +183,10 @@ export function Header() {
             onClick={() => {
               setOpen(false);
               if (onHome) {
-                setTimeout(() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }), 50);
+                setTimeout(
+                  () => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }),
+                  50,
+                );
               } else {
                 navigate({ to: "/contact" });
               }

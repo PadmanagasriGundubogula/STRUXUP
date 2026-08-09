@@ -59,7 +59,12 @@
   --input: oklch(0.92 0.015 255);
   --ring: oklch(0.32 0.13 260);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.21 0.08 260) 0%, oklch(0.32 0.13 260) 55%, oklch(0.68 0.18 45) 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    oklch(0.21 0.08 260) 0%,
+    oklch(0.32 0.13 260) 55%,
+    oklch(0.68 0.18 45) 100%
+  );
   --gradient-brand: linear-gradient(135deg, oklch(0.32 0.13 260), oklch(0.45 0.16 258));
   --gradient-accent: linear-gradient(135deg, oklch(0.68 0.18 45), oklch(0.74 0.17 55));
   --shadow-elegant: 0 20px 60px -20px color-mix(in oklab, oklch(0.32 0.13 260) 40%, transparent);
@@ -93,10 +98,16 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
+    html {
+      scroll-behavior: auto;
+    }
   }
   body {
     background-color: var(--color-background);
@@ -104,17 +115,37 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
 }
 
 @layer utilities {
-  .bg-gradient-hero { background-image: var(--gradient-hero); }
-  .bg-gradient-brand { background-image: var(--gradient-brand); }
-  .bg-gradient-accent { background-image: var(--gradient-accent); }
-  .shadow-elegant { box-shadow: var(--shadow-elegant); }
-  .shadow-card-soft { box-shadow: var(--shadow-card); }
-  .shadow-glow { box-shadow: var(--shadow-glow); }
-  .transition-smooth { transition: var(--transition-smooth); }
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+  .bg-gradient-brand {
+    background-image: var(--gradient-brand);
+  }
+  .bg-gradient-accent {
+    background-image: var(--gradient-accent);
+  }
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  .shadow-card-soft {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
   .text-gradient-accent {
     background: var(--gradient-accent);
     -webkit-background-clip: text;
