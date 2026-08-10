@@ -8,7 +8,7 @@ export const Route = createFileRoute("/career")({
       {
         name: "description",
         content:
-          "Join Struxup. Build your engineering career with a multidisciplinary consultancy in Amaravathi, AP.",
+          "Join Struxup. Build your engineering career with a multidisciplinary consultancy in Rajahmundry, AP.",
       },
       { property: "og:title", content: "Careers at Struxup" },
       {
@@ -21,12 +21,12 @@ export const Route = createFileRoute("/career")({
 });
 
 const openings = [
-  { title: "Senior Structural Engineer", type: "Full-time", loc: "Amaravathi, AP" },
-  { title: "MEP Design Engineer", type: "Full-time", loc: "Amaravathi, AP" },
-  { title: "Architectural Designer", type: "Full-time", loc: "Amaravathi, AP" },
+  { title: "Senior Structural Engineer", type: "Full-time", loc: "Rajahmundry, AP" },
+  { title: "MEP Design Engineer", type: "Full-time", loc: "Rajahmundry, AP" },
+  { title: "Architectural Designer", type: "Full-time", loc: "Rajahmundry, AP" },
   { title: "Renewable Energy Consultant", type: "Full-time", loc: "Hybrid" },
   { title: "Civil Site Engineer", type: "Full-time", loc: "Project Site" },
-  { title: "Graduate Trainee — Engineering", type: "Trainee", loc: "Amaravathi, AP" },
+  { title: "Graduate Trainee — Engineering", type: "Trainee", loc: "Rajahmundry, AP" },
 ];
 
 function Career() {

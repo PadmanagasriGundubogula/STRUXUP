@@ -70,7 +70,7 @@ function WhoWeAre() {
               title: "Code Compliant",
               desc: "IS, IRC and international standards.",
             },
-            { icon: Globe2, title: "Pan-India Reach", desc: "Headquartered in Amaravathi, AP." },
+            { icon: Globe2, title: "Pan-India Reach", desc: "Headquartered in Rajahmundry, AP." },
           ].map((c) => (
             <div
               key={c.title}

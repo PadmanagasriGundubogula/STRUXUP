@@ -3,8 +3,6 @@ import {
   Building2,
   Hammer,
   Wrench,
-  Zap,
-  Cog,
   Factory,
   TrainTrack,
   Leaf,
@@ -12,6 +10,8 @@ import {
   Radio,
 } from "lucide-react";
 import renewable from "@/assets/renewable.jpg";
+import mepImg from "@/assets/MEP DESIGN .png";
+import structuralImg from "@/assets/Structural Designs image.jpg.jpeg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -25,7 +25,7 @@ export const Route = createFileRoute("/services")({
       { property: "og:title", content: "Engineering Services — Struxup" },
       {
         property: "og:description",
-        content: "Full-spectrum engineering consultancy across 10+ disciplines.",
+        content: "Full-spectrum engineering consultancy across 8+ disciplines.",
       },
     ],
   }),
@@ -35,51 +35,39 @@ export const Route = createFileRoute("/services")({
 const services = [
   {
     icon: Building2,
-    title: "Civil & Structural Engineering",
+    title: "Civil & Structural",
     desc: "Foundations, frames, high-rises and special structures designed to perform.",
-    image: "https://via.placeholder.com/400x300?text=Civil+Structural",
+    image: structuralImg,
   },
   {
     icon: Hammer,
     title: "Architectural Design",
     desc: "Functional, beautiful spaces with integrated engineering coordination.",
-    image: "https://via.placeholder.com/400x300?text=Architectural+Design",
-  },
-  {
-    icon: Cog,
-    title: "Mechanical Engineering",
-    desc: "HVAC, plumbing, fire protection and process mechanical systems.",
-    image: "https://via.placeholder.com/400x300?text=Mechanical+Engineering",
-  },
-  {
-    icon: Zap,
-    title: "Electrical Engineering",
-    desc: "LV/HV distribution, lighting, controls and emergency systems.",
-    image: "https://via.placeholder.com/400x300?text=Electrical+Engineering",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Radio,
     title: "Electromagnetic Design",
     desc: "Specialized EM design for industrial and high-tech facilities.",
-    image: "https://via.placeholder.com/400x300?text=Electromagnetic+Design",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Wrench,
-    title: "MEP Coordination",
-    desc: "Fully coordinated MEP delivery — design through commissioning.",
-    image: "https://via.placeholder.com/400x300?text=MEP+Coordination",
+    title: "MEP designs",
+    desc: "HVAC, electrical, plumbing and fire protection design with 3D coordination.",
+    image: mepImg,
   },
   {
     icon: Factory,
     title: "Commercial & Industrial Construction",
     desc: "End-to-end construction consultancy for offices and plants.",
-    image: "https://via.placeholder.com/400x300?text=Commercial+Industrial",
+    image: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: TrainTrack,
     title: "Transportation Engineering",
     desc: "Roads, bridges and transit infrastructure.",
-    image: "https://via.placeholder.com/400x300?text=Transportation+Engineering",
+    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Leaf,
@@ -91,7 +79,7 @@ const services = [
     icon: Waves,
     title: "Hydro Projects",
     desc: "Dams, intake structures and hydropower facilities.",
-    image: "https://via.placeholder.com/400x300?text=Hydro+Projects",
+    image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80",
   },
 ];
 

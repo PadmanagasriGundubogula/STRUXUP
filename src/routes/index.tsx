@@ -5,9 +5,6 @@ import {
   Hammer,
   Leaf,
   Wrench,
-  Zap,
-  CheckCircle2,
-  Cog,
   Factory,
   TrainTrack,
   Waves,
@@ -32,11 +29,13 @@ import { toast } from "sonner";
 import hero from "@/assets/hero-construction.jpg";
 import team from "@/assets/team-engineers.jpg";
 import renewable from "@/assets/renewable.jpg";
+import mepImg from "@/assets/MEP DESIGN .png";
+import structuralImg from "@/assets/Structural Designs image.jpg.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Struxup Engineers & Infra — Engineering Consultancy in Amaravathi" },
+      { title: "Struxup Engineers & Infra — Engineering Consultancy in Rajahmundry" },
       {
         name: "description",
         content:
@@ -53,54 +52,44 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
+// To use custom local images for other services, import them above and replace the image URL below:
+// Example: import archImg from "@/assets/architectural.jpg";
 const services = [
   {
     icon: Building2,
     title: "Civil & Structural",
     desc: "Foundations, frames, high-rises and special structures.",
-    image: "https://via.placeholder.com/400x300?text=Civil+Structural",
+    image: structuralImg,
   },
   {
     icon: Hammer,
     title: "Architectural Design",
     desc: "Functional, beautiful spaces with engineering coordination.",
-    image: "https://via.placeholder.com/400x300?text=Architectural+Design",
-  },
-  {
-    icon: Cog,
-    title: "Mechanical Engineering",
-    desc: "HVAC, plumbing, fire protection and process systems.",
-    image: "https://via.placeholder.com/400x300?text=Mechanical+Engineering",
-  },
-  {
-    icon: Zap,
-    title: "Electrical Engineering",
-    desc: "LV/HV distribution, lighting, controls and emergency systems.",
-    image: "https://via.placeholder.com/400x300?text=Electrical+Engineering",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Radio,
     title: "Electromagnetic Design",
     desc: "Specialized EM design for industrial and high-tech facilities.",
-    image: "https://via.placeholder.com/400x300?text=Electromagnetic+Design",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Wrench,
-    title: "MEP Coordination",
+    title: "MEP designs",
     desc: "Fully coordinated MEP delivery — design through commissioning.",
-    image: "https://via.placeholder.com/400x300?text=MEP+Coordination",
+    image: mepImg,
   },
   {
     icon: Factory,
     title: "Commercial & Industrial Construction",
     desc: "End-to-end construction consultancy for offices and plants.",
-    image: "https://via.placeholder.com/400x300?text=Commercial+Industrial",
+    image: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: TrainTrack,
     title: "Transportation Engineering",
     desc: "Roads, bridges and transit infrastructure.",
-    image: "https://via.placeholder.com/400x300?text=Transportation+Engineering",
+    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=80",
   },
   {
     icon: Leaf,
@@ -112,7 +101,7 @@ const services = [
     icon: Waves,
     title: "Hydro Projects",
     desc: "Dams, intake structures and hydropower facilities.",
-    image: "https://via.placeholder.com/400x300?text=Hydro+Projects",
+    image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80",
   },
 ];
 
@@ -124,9 +113,9 @@ const stats = [
 ];
 
 const openings = [
-  { title: "Senior Structural Engineer", type: "Full-time", loc: "Amaravathi, AP" },
-  { title: "MEP Design Engineer", type: "Full-time", loc: "Amaravathi, AP" },
-  { title: "Architectural Designer", type: "Full-time", loc: "Amaravathi, AP" },
+  { title: "Senior Structural Engineer", type: "Full-time", loc: "Rajahmundry, AP" },
+  { title: "MEP Design Engineer", type: "Full-time", loc: "Rajahmundry, AP" },
+  { title: "Architectural Designer", type: "Full-time", loc: "Rajahmundry, AP" },
   { title: "Renewable Energy Consultant", type: "Full-time", loc: "Hybrid" },
 ];
 
@@ -148,7 +137,7 @@ function Home() {
         <div className="relative mx-auto max-w-7xl px-4 py-28 sm:px-6 lg:px-8 lg:py-40">
           <div className="max-w-3xl text-primary-foreground">
             <span className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider backdrop-blur">
-              Engineering Consultancy • Amaravathi, AP
+              Engineering Consultancy • Rajahmundry, AP
             </span>
             <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
               Building the <span className="text-gradient-accent">infrastructure</span> of tomorrow.
@@ -283,7 +272,7 @@ function Home() {
                   icon: ShieldCheck,
                   t: "Code-compliant designs aligned with IS, IRC and international standards.",
                 },
-                { icon: Globe2, t: "Pan-India reach, headquartered in Amaravathi, AP." },
+                { icon: Globe2, t: "Pan-India reach, headquartered in Rajahmundry, AP." },
               ].map((p) => (
                 <li key={p.t} className="flex gap-3">
                   <p.icon className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent" />
@@ -453,7 +442,7 @@ function Home() {
                 </div>
                 <div>
                   <p className="font-semibold">Office</p>
-                  <p className="text-muted-foreground">Amaravathi, Andhra Pradesh, India</p>
+                  <p className="text-muted-foreground">Rajahmundry, Andhra Pradesh, India</p>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -475,8 +464,13 @@ function Home() {
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-semibold">Working Hours</p>
-                  <p className="text-muted-foreground">Mon – Sat, 9:00 – 18:00</p>
+                  <p className="font-semibold">Mobile Number</p>
+                  <a
+                    href="tel:+917013393445"
+                    className="text-primary hover:text-accent font-semibold"
+                  >
+                    +91 7013393445
+                  </a>
                 </div>
               </li>
             </ul>

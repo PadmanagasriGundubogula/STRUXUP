@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with Struxup Engineers & Infra Pvt. Ltd. — Amaravathi, Andhra Pradesh.",
+          "Get in touch with Struxup Engineers & Infra Pvt. Ltd. — Rajahmundry, Andhra Pradesh.",
       },
       { property: "og:title", content: "Contact Struxup" },
       { property: "og:description", content: "Let's discuss your next engineering project." },
@@ -69,7 +69,7 @@ function Contact() {
                 </div>
                 <div>
                   <p className="font-semibold">Office</p>
-                  <p className="text-muted-foreground">Amaravathi, Andhra Pradesh, India</p>
+                  <p className="text-muted-foreground">Rajahmundry, Andhra Pradesh, India</p>
                 </div>
               </li>
               <li className="flex gap-4">
@@ -91,8 +91,13 @@ function Contact() {
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="font-semibold">Working Hours</p>
-                  <p className="text-muted-foreground">Monday – Saturday, 9:00 – 18:00</p>
+                  <p className="font-semibold">Mobile Number</p>
+                  <a
+                    href="tel:+917013393445"
+                    className="text-primary hover:text-accent font-semibold"
+                  >
+                    +91 7013393445
+                  </a>
                 </div>
               </li>
             </ul>

@@ -8,7 +8,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Learn about Struxup Engineers & Infra — a multidisciplinary engineering consultancy headquartered in Amaravathi, Andhra Pradesh.",
+          "Learn about Struxup Engineers & Infra — a multidisciplinary engineering consultancy headquartered in Rajahmundry, Andhra Pradesh.",
       },
       { property: "og:title", content: "About Struxup Engineers & Infra" },
       {
@@ -87,7 +87,7 @@ function About() {
                 supervision, our team translates ambitious ideas into resilient infrastructure.
               </p>
               <p>
-                Headquartered in Amaravathi, Andhra Pradesh, we serve clients across India with the
+                Headquartered in Rajahmundry, Andhra Pradesh, we serve clients across India with the
                 precision and care that complex projects demand.
               </p>
             </div>

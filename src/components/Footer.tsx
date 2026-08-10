@@ -107,7 +107,7 @@ export function Footer() {
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-glow" />
                 <span className="text-primary-foreground/85">
-                  Amaravathi,
+                  Rajahmundry,
                   <br />
                   Andhra Pradesh, India
                 </span>
@@ -123,7 +123,12 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Phone className="mt-0.5 h-4 w-4 flex-shrink-0 text-accent-glow" />
-                <span className="text-primary-foreground/85">Mon – Sat, 9:00 – 18:00</span>
+                <a
+                  href="tel:+917013393445"
+                  className="text-primary-foreground/85 hover:text-accent-glow"
+                >
+                  +91 7013393445
+                </a>
               </li>
             </ul>
           </div>
@@ -133,7 +138,7 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} Struxup Engineers & Infra Pvt. Ltd. All rights reserved.
           </p>
-          <p>Built with precision in Amaravathi, AP.</p>
+          <p>Built with precision in Rajahmundry, AP.</p>
         </div>
       </div>
     </footer>
