@@ -23,14 +23,18 @@ import {
   MapPin,
   Phone,
   Send,
+  CheckCircle2,
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import hero from "@/assets/hero-construction.jpg";
 import team from "@/assets/team-engineers.jpg";
 import renewable from "@/assets/renewable.jpg";
-import mepImg from "@/assets/MEP DESIGN .png";
-import structuralImg from "@/assets/Structural Designs image.jpg.jpeg";
+import mepImg from "@/assets/mep-design.png";
+import structuralImg from "@/assets/structural-designs.jpeg";
+import commercialImg from "@/assets/commercial-industrial-construction.jpeg";
+import transportImg from "@/assets/transportation-engineering.jpeg";
+import hydroImg from "@/assets/hydro-projects.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,8 +56,6 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-// To use custom local images for other services, import them above and replace the image URL below:
-// Example: import archImg from "@/assets/architectural.jpg";
 const services = [
   {
     icon: Building2,
@@ -83,13 +85,13 @@ const services = [
     icon: Factory,
     title: "Commercial & Industrial Construction",
     desc: "End-to-end construction consultancy for offices and plants.",
-    image: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=800&q=80",
+    image: commercialImg,
   },
   {
     icon: TrainTrack,
     title: "Transportation Engineering",
     desc: "Roads, bridges and transit infrastructure.",
-    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?auto=format&fit=crop&w=800&q=80",
+    image: transportImg,
   },
   {
     icon: Leaf,
@@ -101,7 +103,7 @@ const services = [
     icon: Waves,
     title: "Hydro Projects",
     desc: "Dams, intake structures and hydropower facilities.",
-    image: "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80",
+    image: hydroImg,
   },
 ];
 
@@ -309,12 +311,14 @@ function Home() {
               </div>
               <h3 className="mt-5 font-display text-lg font-semibold text-foreground">{s.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-              <img
-                src={s.image}
-                alt={s.title}
-                className="mt-4 h-32 w-full rounded-lg object-cover"
-                loading="lazy"
-              />
+              <div className="mt-5 overflow-hidden rounded-xl border border-border/50 bg-muted">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
             </div>
           ))}
         </div>

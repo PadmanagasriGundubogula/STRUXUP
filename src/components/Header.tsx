@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useRouterState, useNavigate } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/struxup-logo.png";
+import logo from "@/assets/struxup-new-logo.png";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -91,9 +91,7 @@ export function Header() {
           <img
             src={logo}
             alt="Struxup Engineers & Infra logo"
-            className="h-12 w-12 object-contain"
-            width={48}
-            height={48}
+            className="h-12 w-auto max-w-[180px] object-contain"
           />
           <div className="hidden flex-col leading-tight sm:flex">
             <span className="font-display text-base font-bold text-primary">STRUXUP</span>
